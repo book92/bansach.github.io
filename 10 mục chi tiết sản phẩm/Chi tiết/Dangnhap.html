@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Online Bookstore</title>
+	<link rel="stylesheet" type="text/css" href="css/styledangky.css">
+	<script language="javascript">
+		function KiemTraThongTin(){
+			var Tendn=document.getElementById("tendangnhap");
+			if(Tendn.value==""){
+				alert("Vui lòng nhập tên tài khoản.");
+				Tendn.focus();
+				return false;
+			}
+			var mk=document.getElementById("matkhau");
+			if(mk.value==""){
+				alert("Vui lòng nhập mật khẩu");
+				mk.focus();
+				return false;
+			}
+			alert("Đăng nhập thành công!")
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<div 
+			<div id="logo">
+				<a href="Trang chủ.html">
+					<img src="Ảnh/Vận chuyển/attachment_18329574.png">
+				</a>
+			</div>
+	<div id="container">
+		<form onSubmit="return KiemTraThongTin()" action="Trang chủ.html" method="post" name="dangky">
+					<fieldset id="dangky">
+						<p>ĐĂNG NHẬP THÀNH VIÊN</p>
+					<fieldset class="in">
+						<legend><b>Thông tin đăng nhập</b></legend>
+						<table>
+							<tr>
+								<td><label for="dangnhap">Tên đăng nhập:</label></td>
+								<td><input id="tendangnhap" type="text" name="txtTenDangNhap"></td>	
+							</tr>
+							<tr>
+								<td><label for="matkhau">Mật khẩu:</label></td>
+								<td><input id="matkhau" type="password" name="txtMatKhau"></td>	
+							</tr>
+						</table>
+					</fieldset>
+						<center>
+							<input id="sm" type="submit" value="Đăng nhập">
+							
+						</center>
+						<center>
+							<h4>Chưa Có Tài Khoản</h4><a style="font-weight:bold;" href="Dangky.html"><b>ĐĂNG KÍ NGAY</b></a>
+						</center>
+					</fieldset>	
+						
+			<div class="span4 otherLoginBox"> <div class="sub"> <p class="title"><h2>Đăng nhập bằng tài khoản khác</h2></p> 
+				<ul>
+					<a href="https://accounts.google.com/ServiceLogin/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/google_signin_dark.png" alt="google" title="google"></a>
+				  
+					<a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjE3NTI3NTEzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D"><img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/facebook_signin_dark.png" alt="facebook" title="facebook" height="40"></a>
+                </ul>
+				</form>
+		</div>
+				</form>
+		</div>
+</body>
+</html>

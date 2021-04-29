@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Online Bookstore</title>
+	<link rel="stylesheet" type="text/css" href="css/styledangky.css">
+	<script language="javascript">
+		function KiemTraThongTin(){
+			var hoTen=document.getElementById("hoten");
+			if(hoTen.value==""){
+				alert("Vui lòng nhập họ tên.");
+				hoten.focus();
+				return false;
+			}
+			var nam=document.getElementById("nam");
+			if(nam.value==""){
+				alert("Hãy điền năm sinh");
+				nam.focus();
+				return false;
+			}
+			if(isNaN(nam.value)==true){
+				alert("Năm sinh phải là số.")
+				nam.value="";
+				nam.focus();
+				return false;
+			}
+			var email=window.document.dangky.txtEmail;
+			re=/\w+@\w+\.\w+/;
+			if(email.value==""){
+				alert("Bạn chưa nhập email.");
+				email.focus();
+				return false;
+			}
+			else
+				if(re.test(email.value)==false){
+					alert("Email không đúng định dạng!");
+					email.focus();
+					return false;
+			}
+			var ten=document.getElementById("ten");
+			if(ten.value==""){
+				alert("Vui lòng nhập tên tài khoản");
+				ten.focus();
+				return false;
+			}
+			var mk=document.getElementById("mk");
+			if(mk.value==""){
+				alert("Vui lòng nhập mật khẩu");
+				mk.focus();
+				return false;
+			}
+			var xn=document.getElementById("xn");
+			if(xn.value==""){
+				alert("Vui lòng lại nhập mật khẩu");
+				xn.focus();
+				return false;
+			}
+			if(xn.value!=mk.value){
+				alert("Mật khẩu không khớp");
+				return false;
+			}
+			alert("Đăng ký thành công! Xin chúc mừng.")
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<div 
+			<div id="logo">
+				<a href="Trang chủ.html">
+					<img src="Ảnh/Vận chuyển/attachment_18329574.png">
+				</a>
+			</div>
+	<div id="container">
+		<form onSubmit="return KiemTraThongTin()" action="Trang chủ.html" method="post" name="dangky">
+					<fieldset id="dangky">
+						<p>ĐĂNG KÝ THÀNH VIÊN</p>
+					<fieldset class="in">
+					  <legend><b>Thông tin cá nhân</b></legend>
+						<table>
+							<tr>
+								<td>Họ và tên:</td>
+								<td class="mid"><input id="hoten" name="txtHoTen" type="text"></td>
+							</tr>
+							<tr>
+								<td>Ngày sinh:</td>
+								<td>
+									<div class="mid">
+									<select>
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+
+
+									</select>
+									Tháng
+									<select>
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+									<label for="nam">Năm</label>
+									<input  type="text" id="nam" name="txtNam" size="4" >
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Giới tính:
+								</td>
+								<td>
+									<input type="radio" name="gioitinh" value="nam">
+									<label for="nam">Nam</label>
+									<input type="radio" name="gioitinh" value="nu">
+									<label for="nu">Nữ</label>
+								</td>
+							</tr>
+							<tr>
+								<td>Địa chỉ:</td>
+								<td><textarea rows="3"></textarea></td>
+							</tr>
+							<tr>
+								<td>Điện thoại:</td>
+								<td>
+									<input type="tel">
+								</td> 
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td><input id="email" name="txtEmail" type="email"></td>
+							</tr>
+					  </table>
+					</fieldset>
+					<fieldset class="in">
+						<legend><b>Thông tin đăng nhập</b></legend>
+						<table>
+							<tr>
+								<td><label for="dangnhap">Tên đăng nhập:</label></td>
+								<td><input id="ten" type="text" name="txtTenDangNhap"></td>	
+							</tr>
+							<tr>
+								<td><label for="matkhau">Mật khẩu:</label></td>
+								<td><input id="mk" type="password" name="txtMatKhau"></td>	
+							</tr>
+							<tr>
+								<td><label for="nhaplaimk">Nhập lại mật khẫu:</label></td>
+								<td><input id="xn" type="password" name="txtNhapLaiMatkhau"></td>	
+							</tr>
+						</table>
+					</fieldset>
+						<center>
+							<input id="sm" type="submit" value="Đăng ký">
+							<input type="reset" value="Hủy"><br>
+						</center>
+					</fieldset>
+			<div class="span4 otherLoginBox"> <div class="sub"> <p class="title"><h2>Đăng nhập bằng tài khoản khác</h2></p> 
+				<ul>
+					<a href="https://accounts.google.com/ServiceLogin/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/google_signin_dark.png" alt="google" title="google"></a>
+				  
+					<a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjE3NTI3NTEzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D"><img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/facebook_signin_dark.png" alt="facebook" title="facebook" height="40"></a>
+                </ul>
+				</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Online Bookstore</title>
+	<link rel="stylesheet" type="text/css" href="css/stylethanhtoan.css">
+	<script language="javascript"></script>
+	<script>
+		function thongbao(){
+			alert("Thanh toán thành công");
+		}
+		 function ql(){
+          history.back();
+      }
+	</script>
+</head>
+
+<body>
+	<div 
+			<div id="logo">
+				<a href="Trang chủ.html">
+					<img src="Ảnh/Vận chuyển/attachment_18329574.png">
+				</a>
+			</div>
+	<div id="container">
+		<form onSubmit="return KiemTraThongTin()" action="Trang chủ.html" method="post" name="dangky">
+					<fieldset id="dangky">
+						<p>THANH TOÁN</p>
+					<fieldset class="in">
+						<table>
+			<div id="picture">
+				<center>
+				<img src="../Ảnh/Vận chuyển/89422262_363394207953657_514055306989273088_n.jpg" width="400"></center>
+			</div>
+		
+		  
+			<div id="tensp">
+				<center>
+				<b><h1>ÔNG GIÀ VÀ BIỂN CẢ
+</h1></b><br>
+				<h4>Nhà xuất bản: NXB Trẻ</h4>
+				<h4>Nhà phát hành:NXB Trẻ</h4>	
+				<h1>Giá bán: 90.000<u>đ</u></h1></center>
+					  </table>
+					<fieldset>
+						<center>
+							<input onClick="thongbao()" id="sm" type="submit" value="Thanh Toán">
+							<input 	id="sm"
+    								onclick="window.history.go(-1); return false;"
+    								type="submit"
+    								value="Hủy"/>
+							<input 	id="sm"
+								   	type="submit"   
+									action="action"
+    								onclick="window.history.go(-3); return false;"
+									value="Sản Phẩm Khác">
+						</center>
+					</fieldset>
+				</form>
+		</div>
+</body>
+</html>

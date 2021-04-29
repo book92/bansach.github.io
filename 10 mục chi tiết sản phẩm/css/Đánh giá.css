@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+#container{
+	width: 1000px;
+	margin: 0px auto;
+	border: 1px solid #EA11CA;
+}
+header{
+	border: 0px solid;
+	background-color: rgba(39,39,39,0.3);
+	height: 25px;
+}
+#login{
+	margin: 0px;
+	margin-right: 20px;
+	float: right;
+}
+#login img{
+	position: relative;
+}
+#logo{
+	clear: both;
+}
+div#login a{
+	color: black;
+	text-decoration: none;
+}
+input#ms[type=submit]{
+	background-color: #206AB5;
+	height: 30px;
+	width: 100px;
+	border-radius: 3px;
+	border: 0px solid;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 10px;
+}
+input#ms[type=submit]:hover{
+	background-color:red;
+	font-style: oblique;
+	transform: scale(1.3);
